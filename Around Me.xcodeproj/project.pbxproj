@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18411D3B17F3D15F0082DD88 /* PlacesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18411D3A17F3D15F0082DD88 /* PlacesLoader.m */; };
 		8FB68A4316B9ACCA00979E63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4216B9ACCA00979E63 /* UIKit.framework */; };
 		8FB68A4516B9ACCA00979E63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4416B9ACCA00979E63 /* Foundation.framework */; };
 		8FB68A4716B9ACCA00979E63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4616B9ACCA00979E63 /* CoreGraphics.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18411D3917F3D15F0082DD88 /* PlacesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesLoader.h; sourceTree = "<group>"; };
+		18411D3A17F3D15F0082DD88 /* PlacesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesLoader.m; sourceTree = "<group>"; };
 		8FB68A3F16B9ACCA00979E63 /* Around Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Around Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB68A4216B9ACCA00979E63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FB68A4416B9ACCA00979E63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,8 @@
 				8FB68A5E16B9ACCA00979E63 /* MainViewController.m */,
 				8FB68A6016B9ACCA00979E63 /* FlipsideViewController.h */,
 				8FB68A6116B9ACCA00979E63 /* FlipsideViewController.m */,
+				18411D3917F3D15F0082DD88 /* PlacesLoader.h */,
+				18411D3A17F3D15F0082DD88 /* PlacesLoader.m */,
 				8FB68A4916B9ACCA00979E63 /* Supporting Files */,
 			);
 			path = "Around Me";
@@ -198,6 +203,7 @@
 				8FB68A5316B9ACCA00979E63 /* AppDelegate.m in Sources */,
 				8FB68A5F16B9ACCA00979E63 /* MainViewController.m in Sources */,
 				8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */,
+				18411D3B17F3D15F0082DD88 /* PlacesLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
