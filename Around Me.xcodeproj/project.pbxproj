@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18411D3B17F3D15F0082DD88 /* PlacesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18411D3A17F3D15F0082DD88 /* PlacesLoader.m */; };
+		1896199417F5E73900D3F6A4 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896199317F5E73900D3F6A4 /* Place.m */; };
+		1896199717F5E79600D3F6A4 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896199617F5E79600D3F6A4 /* PlaceAnnotation.m */; };
 		8FB68A4316B9ACCA00979E63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4216B9ACCA00979E63 /* UIKit.framework */; };
 		8FB68A4516B9ACCA00979E63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4416B9ACCA00979E63 /* Foundation.framework */; };
 		8FB68A4716B9ACCA00979E63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB68A4616B9ACCA00979E63 /* CoreGraphics.framework */; };
@@ -29,6 +31,10 @@
 /* Begin PBXFileReference section */
 		18411D3917F3D15F0082DD88 /* PlacesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesLoader.h; sourceTree = "<group>"; };
 		18411D3A17F3D15F0082DD88 /* PlacesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesLoader.m; sourceTree = "<group>"; };
+		1896199217F5E73900D3F6A4 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		1896199317F5E73900D3F6A4 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		1896199517F5E79600D3F6A4 /* PlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceAnnotation.h; sourceTree = "<group>"; };
+		1896199617F5E79600D3F6A4 /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceAnnotation.m; sourceTree = "<group>"; };
 		8FB68A3F16B9ACCA00979E63 /* Around Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Around Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB68A4216B9ACCA00979E63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FB68A4416B9ACCA00979E63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +119,10 @@
 				8FB68A6016B9ACCA00979E63 /* FlipsideViewController.h */,
 				8FB68A6116B9ACCA00979E63 /* FlipsideViewController.m */,
 				18411D3917F3D15F0082DD88 /* PlacesLoader.h */,
+				1896199217F5E73900D3F6A4 /* Place.h */,
+				1896199317F5E73900D3F6A4 /* Place.m */,
+				1896199517F5E79600D3F6A4 /* PlaceAnnotation.h */,
+				1896199617F5E79600D3F6A4 /* PlaceAnnotation.m */,
 				18411D3A17F3D15F0082DD88 /* PlacesLoader.m */,
 				8FB68A4916B9ACCA00979E63 /* Supporting Files */,
 			);
@@ -202,7 +212,9 @@
 				8FB68A4F16B9ACCA00979E63 /* main.m in Sources */,
 				8FB68A5316B9ACCA00979E63 /* AppDelegate.m in Sources */,
 				8FB68A5F16B9ACCA00979E63 /* MainViewController.m in Sources */,
+				1896199417F5E73900D3F6A4 /* Place.m in Sources */,
 				8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */,
+				1896199717F5E79600D3F6A4 /* PlaceAnnotation.m in Sources */,
 				18411D3B17F3D15F0082DD88 /* PlacesLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
