@@ -8,8 +8,10 @@
 
 #import "MarkerView.h"
 #import "ARGeoCoordinate.h"
+#import "MarkerView.h"
 
-@interface MarkerView ()
+
+@interface MarkerView () <MarkerViewDelegate>
 
 @property (nonatomic, strong) UILabel *lblDistance;
 
@@ -78,5 +80,19 @@ const float kHeight = 100.0f;
 	[super drawRect:rect];
 	[[self lblDistance] setText:[NSString stringWithFormat:@"%.2f km", [[self coordinate] distanceFromOrigin] / 1000.0f]];
 }
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	if(_delegate && [_delegate conformsToProtocol:@protocol(MarkerViewDelegate)]) {
+		[_delegate didTouchMarkerView:self];
+	}
+}
+
+// The MarkerViews are scaled dependent on the distance from the user’s position, but you want to do the hitTest as though they are their original size so that it’s easier to touch a marker. To achieve this, you create a CGRect with the unscaled size and call CGRectContainsPoint(CGRect, CGPoint), which returns true if the point is inside the given rect.
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+	CGRect theFrame = CGRectMake(0, 0, kWidth, kHeight);
+    
+	return CGRectContainsPoint(theFrame, point);
+}
+
 
 @end

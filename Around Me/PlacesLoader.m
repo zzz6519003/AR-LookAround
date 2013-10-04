@@ -7,6 +7,7 @@
 //
 
 #import "PlacesLoader.h"
+#import "Place.h"
 //1
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/NSJSONSerialization.h>
@@ -72,6 +73,26 @@ NSString * const apiKey = @"AIzaSyB85ry86J8XXqCTIeD_Kjf3PjN1iPkuCS4";
 	NSLog(@"Starting connection: %@ for request: %@", connection, request);
 }
 
+- (void)loadDetailInformation:(Place *)location successHanlder:(SuccessHandler)handler errorHandler:(ErrorHandler)errorHandler {
+	_responseData = nil;
+	_successHandler = handler;
+	_errorHandler = errorHandler;
+    
+	NSMutableString *uri = [NSMutableString stringWithString:apiURL];
+    
+	[uri appendFormat:@"details/json?reference=%@&sensor=true&key=%@", [location reference], apiKey];
+    
+	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[uri stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20.0f];
+    
+	[request setHTTPShouldHandleCookies:YES];
+	[request setHTTPMethod:@"GET"];
+    
+	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+	NSLog(@"Starting connection: %@ for request: %@", connection, request);
+}
+
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	if(!_responseData) {
 		_responseData = [NSMutableData dataWithData:data];
@@ -97,6 +118,8 @@ NSString * const apiKey = @"AIzaSyB85ry86J8XXqCTIeD_Kjf3PjN1iPkuCS4";
     
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
+
+
 
 
 @end
